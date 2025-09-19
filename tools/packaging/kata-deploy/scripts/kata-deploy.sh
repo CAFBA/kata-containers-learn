@@ -99,7 +99,7 @@ host_install_dir="/host${dest_dir}"
 
 HELM_POST_DELETE_HOOK="${HELM_POST_DELETE_HOOK:-"false"}"
 
-# # 在宿主机命名空间中执行systemctl命令
+# 在宿主机命名空间中执行systemctl命令
 function host_systemctl() {
   	# 进入 PID 为 1 的进程的命名空间，进入宿主机的 Mount Namespace
 	nsenter --target 1 --mount systemctl "${@}"
