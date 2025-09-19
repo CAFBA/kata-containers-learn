@@ -21,7 +21,7 @@ arch=$(uname -m)
 IMAGE_TAG="${REGISTRY}:$(git rev-parse HEAD)-${arch}"
 
 pushd ${KATA_DEBUG_DIR}
-kata-runtime --log 
+
 echo "Building the image"
 docker build --tag ${IMAGE_TAG} .
 
